@@ -1,0 +1,52 @@
+.confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+  animation: confettiFadeIn 0.3s ease-in;
+}
+
+/* Animación de entrada más dramática para el confeti */
+@keyframes confettiFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Efecto de brillo para hacer el confeti más notorio */
+.confetti-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Responsive - ajustar para dispositivos móviles */
+@media (max-width: 768px) {
+  .confetti-container {
+    /* En móviles, reducir la cantidad de confeti para mejor rendimiento */
+    transform: scale(0.8);
+  }
+}
+
+/* Asegurar que el confeti esté por encima de todo */
+.confetti-container canvas {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  z-index: 10000 !important;
+}

@@ -1,0 +1,66 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-header {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.App-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  animation: pulse 2s infinite;
+}
+
+.App-header p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Estilos específicos para laptops */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .App-header {
+    padding: 0.8rem 1.5rem;
+  }
+  
+  .App-header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .App-header p {
+    font-size: 0.9rem;
+  }
+  
+  main {
+    padding: 0.8rem;
+  }
+}
+

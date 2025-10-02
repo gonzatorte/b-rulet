@@ -1,0 +1,12 @@
+---
+alwaysApply: true
+---
+
+Este es un projecto en react con typescript.
+
+Implementa una ruleta que simule
+
+La aplicación debe ser vistosa e incluír
+
+
+Al correr los servidores con npm run dev, no te olvides de apagarlos luego de ejecutar lo que querías...
